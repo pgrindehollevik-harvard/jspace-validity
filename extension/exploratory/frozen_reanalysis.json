@@ -1,0 +1,259 @@
+{
+ "status": "exploratory",
+ "provenance_note": "computed after registered outcomes were known; changes no registered verdict",
+ "bootstrap_seed": 20260825,
+ "n_bootstrap": 10000,
+ "inputs": {
+  "extension/results/qwen3-14b/scale_gate.json": "e8287016b93cadc8a0e7eb9ebc6e5167b739ae23c7cd537aef2e002b5b846451",
+  "baseline/qwen3-4b/calibration.json": "39fa2018feac4d886b6b25a0bec2cb985ef438b296ba1db6899f5cd3e991a658",
+  "baseline/qwen3-4b/calibration_state.json": "066ac362c2837e2193793a73022111f55a5081e2fd9f02b587af33b1cc400d68"
+ },
+ "paired_selectivity_14b": {
+  "n_sequences": 50,
+  "sequences_j_worse": 49,
+  "sequences_j_better": 0,
+  "sequences_tied": 1,
+  "sign_test_p": 3.552713678800501e-15,
+  "mean_paired_delta": -0.08515625,
+  "mean_paired_delta_ci95": [
+   -0.09515625,
+   -0.07515625
+  ],
+  "selectivity_index": 1.5730809674027344,
+  "selectivity_index_ci95": [
+   1.4880468220963903,
+   1.6711916496373762
+  ]
+ },
+ "selectivity_index_4b_rungs": [
+  {
+   "band": [
+    14,
+    24
+   ],
+   "k": 10,
+   "selectivity_index": 1.837331334332833,
+   "note": "point estimate; per-sequence agreements were not retained at 4B"
+  },
+  {
+   "band": [
+    14,
+    31
+   ],
+   "k": 10,
+   "selectivity_index": 1.5510321100917432,
+   "note": "point estimate; per-sequence agreements were not retained at 4B"
+  },
+  {
+   "band": [
+    14,
+    24
+   ],
+   "k": 5,
+   "selectivity_index": 2.1307692307692303,
+   "note": "point estimate; per-sequence agreements were not retained at 4B"
+  },
+  {
+   "band": [
+    14,
+    19
+   ],
+   "k": 10,
+   "selectivity_index": 2.169169169169169,
+   "note": "point estimate; per-sequence agreements were not retained at 4B"
+  }
+ ],
+ "displacement_14b_wikitext": {
+  "layers": [
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21"
+  ],
+  "per_layer_jspace": {
+   "15": 0.12181546479463577,
+   "16": 0.08565306231379509,
+   "17": 0.07375927075743675,
+   "18": 0.059017412438988684,
+   "19": 0.062450071200728416,
+   "20": 0.05092591725289822,
+   "21": 0.05897822171449661
+  },
+  "per_layer_random": {
+   "15": 0.12181546404957772,
+   "16": 0.12297948017716408,
+   "17": 0.1133214482665062,
+   "18": 0.10751475214958191,
+   "19": 0.10915948778390884,
+   "20": 0.10292452543973923,
+   "21": 0.108433827906847
+  },
+  "entry_layer": "15",
+  "entry_ratio_j_over_r": 1.0000000061162846,
+  "attenuation_last_over_first_jspace": 0.4841603799150283,
+  "attenuation_last_over_first_random": 0.890148297286094,
+  "cumulative_dose_jspace": 0.5125994204729796,
+  "cumulative_dose_random": 0.7861489857733249,
+  "damage_jspace": 0.23375,
+  "damage_random": 0.14859374999999997,
+  "damage_per_unit_dose_jspace": 0.45600909923838195,
+  "damage_per_unit_dose_random": 0.1890147449008411,
+  "damage_per_dose_ratio": 2.4125583402374695,
+  "dose_definition": "sum over band layers of the recorded mean per-layer relative displacement; a coarse severity proxy, not a causal quantity"
+ },
+ "flip_anatomy": {
+  "clean_correct_4b": 41,
+  "rung_downflips": {
+   "14-24:10": [
+    2,
+    14,
+    17,
+    18,
+    34,
+    35,
+    39,
+    46,
+    48
+   ],
+   "14-31:10": [
+    2,
+    5,
+    14,
+    17,
+    18,
+    34,
+    35,
+    39,
+    46,
+    48
+   ],
+   "14-24:5": [
+    2,
+    14,
+    17,
+    18,
+    34,
+    35,
+    39,
+    46,
+    48
+   ],
+   "14-19:10": [
+    2,
+    3,
+    14,
+    17,
+    18,
+    34,
+    35,
+    39,
+    46,
+    48
+   ]
+  },
+  "core_items": [
+   2,
+   14,
+   17,
+   18,
+   34,
+   35,
+   39,
+   46,
+   48
+  ],
+  "pairwise": {
+   "14-24:10 vs 14-31:10": {
+    "jaccard": 0.9,
+    "expected_jaccard_null": 0.13611306286726996,
+    "overlap_tail_p": 2.854340995245624e-08
+   },
+   "14-24:10 vs 14-24:5": {
+    "jaccard": 1.0,
+    "expected_jaccard_null": 0.1288763976494722,
+    "overlap_tail_p": 2.854340995245624e-09
+   },
+   "14-24:10 vs 14-19:10": {
+    "jaccard": 0.9,
+    "expected_jaccard_null": 0.13611306286726996,
+    "overlap_tail_p": 2.854340995245624e-08
+   },
+   "14-31:10 vs 14-24:5": {
+    "jaccard": 0.9,
+    "expected_jaccard_null": 0.13611306286726996,
+    "overlap_tail_p": 2.854340995245624e-08
+   },
+   "14-31:10 vs 14-19:10": {
+    "jaccard": 0.8181818181818182,
+    "expected_jaccard_null": 0.14432536898346332,
+    "overlap_tail_p": 2.774062654754341e-07
+   },
+   "14-24:5 vs 14-19:10": {
+    "jaccard": 0.9,
+    "expected_jaccard_null": 0.13611306286726996,
+    "overlap_tail_p": 2.854340995245624e-08
+   }
+  },
+  "rung_downflips_random": {
+   "14-24:10": [
+    2,
+    18,
+    27,
+    35,
+    38
+   ],
+   "14-31:10": [
+    14,
+    34,
+    35,
+    48,
+    49
+   ],
+   "14-24:5": [
+    14,
+    38,
+    39
+   ],
+   "14-19:10": [
+    35
+   ]
+  },
+  "random_downflip_events": 14,
+  "random_downflip_events_in_core": 10,
+  "core_fraction_null": 0.21951219512195122,
+  "downflips_14b": [
+   19,
+   32
+  ],
+  "clean_correct_14b": 46,
+  "core_overlap_14b": 0,
+  "expected_overlap_14b_null": 0.3913043478260869,
+  "alignment_note": "cross-model item indices assume both studies stage the pinned order-of-operations file in file order; within-4B comparisons do not need this"
+ },
+ "mcnemar_design_limits": {
+  "n_items": 55,
+  "alpha": 0.05,
+  "min_discordant_all_one_way": 6,
+  "min_detectable_drop": 0.10909090909090909,
+  "examples": [
+   {
+    "down": 5,
+    "up": 0,
+    "p": 0.0625
+   },
+   {
+    "down": 6,
+    "up": 0,
+    "p": 0.03125
+   },
+   {
+    "down": 8,
+    "up": 1,
+    "p": 0.0390625
+   }
+  ]
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "schema_version": 2,
+ "title": "When does J-space ablation become selective?",
+ "profile": "qwen3-8b",
+ "role": "secondary",
+ "model_id": "Qwen/Qwen3-8B",
+ "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+ "lens_file": "qwen3-8b/jlens/Salesforce-wikitext/Qwen3-8B_jacobian_lens.pt",
+ "lens_revision": "0731326edff4ae730ffc5356fe1a4728c748b3a6",
+ "companion": {
+  "repository": "https://github.com/anthropics/jacobian-lens.git",
+  "revision": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+ },
+ "code_commit": "b8f8b624a9fdbc5ae532a7cc3b6b458b61b43938",
+ "config_sha256": "18581126da8946d50a7e5cef4d60cb2cc95af7807e25f3fa86b9422889a59b5f",
+ "data_sha256": "a7f2abfe81ba735ebd7b11341d99502e0f6762a0f82608c58488f6090d8181c6",
+ "band": [
+  14,
+  19
+ ],
+ "k": 10,
+ "started_at": "2026-08-25T18:27:12.361100+00:00",
+ "finished_at": "2026-08-25T18:30:06.196798+00:00",
+ "environment": {
+  "torch": "2.13.0+cu130",
+  "cuda_runtime": "13.0",
+  "gpu": "NVIDIA L40S"
+ },
+ "peak_cuda_gb": 16.471340544,
+ "lens_validation": {
+  "order_ops": {
+   "n": 55,
+   "jlens": {
+    "1": 0.05454545454545454,
+    "5": 0.2909090909090909,
+    "10": 0.41818181818181815
+   },
+   "logit_lens": {
+    "1": 0.18181818181818182,
+    "5": 0.35454545454545455,
+    "10": 0.4727272727272727
+   }
+  },
+  "multihop": {
+   "n": 93,
+   "jlens": {
+    "1": 0.15591397849462366,
+    "5": 0.3870967741935484,
+    "10": 0.46236559139784944
+   },
+   "logit_lens": {
+    "1": 0.21505376344086022,
+    "5": 0.40860215053763443,
+    "10": 0.4713261648745519
+   }
+  },
+  "gate": "FAIL"
+ },
+ "metrics": {},
+ "checks": {
+  "lens_validation": false
+ },
+ "required_checks": [
+  "lens_validation",
+  "clean_control_floor",
+  "positive_j_drop",
+  "j_below_random",
+  "j_drop_twice_random",
+  "wikitext_selectivity",
+  "coherence"
+ ],
+ "passes_gate": false,
+ "status": "STOP",
+ "stop_reason": "lens_validation_failed",
+ "coherence_outputs": []
+}

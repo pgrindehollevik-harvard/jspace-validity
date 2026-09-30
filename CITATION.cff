@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Worse Than Random: J-Space Ablation Is Anti-Selective at Every Measured Qwen3 Scale"
+authors:
+  - family-names: Flo
+    given-names: Peter
+date-released: 2026-09-30
+license: MIT
+url: "https://pflo.org"
+keywords:
+  - mechanistic interpretability
+  - J-space
+  - Jacobian lens
+  - Qwen3
+  - ablation
+preferred-citation:
+  type: conference-paper
+  title: "Worse Than Random: J-Space Ablation Is Anti-Selective at Every Measured Qwen3 Scale"
+  authors:
+    - family-names: Flo
+      given-names: Peter
+  collection-title: "NeurIPS 2026 Workshop on Interpretability as a Science"
+  year: 2026

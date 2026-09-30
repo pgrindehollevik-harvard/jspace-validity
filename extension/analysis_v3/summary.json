@@ -1,0 +1,126 @@
+{
+ "registration": "extension/PREREGISTRATION_V3.md",
+ "h1_alpha_per_model": 0.025,
+ "bootstrap_seed": 20260825,
+ "rows": [
+  {
+   "profile": "qwen3-1.7b",
+   "band": [
+    10,
+    14
+   ],
+   "passes_gate": false,
+   "status": "STOP",
+   "stop_reason": "noncoherence_gate_failed:lens_validation,positive_j_drop,j_below_random,j_drop_twice_random,wikitext_selectivity",
+   "checks": {
+    "lens_validation": false,
+    "clean_control_floor": true,
+    "positive_j_drop": false,
+    "j_below_random": false,
+    "j_drop_twice_random": false,
+    "wikitext_selectivity": false
+   },
+   "lens_gate": "FAIL",
+   "h1_anti_selectivity": {
+    "sequences_j_worse": 50,
+    "sequences_j_better": 0,
+    "sequences_tied": 0,
+    "sign_test_p": 1.7763568394002505e-15,
+    "mean_paired_delta": -0.2696875,
+    "mean_paired_delta_ci95": [
+     -0.28609375,
+     -0.25343359375
+    ],
+    "selectivity_index": 3.3774104683195607,
+    "selectivity_index_ci95": [
+     3.130259129967776,
+     3.654547425118235
+    ],
+    "confirmed": true
+   },
+   "descriptive_intervals": {
+    "j_drop_ci95": [
+     -0.05454545454545454,
+     0.12727272727272726
+    ],
+    "specificity_ci95": [
+     -0.05454545454545454,
+     0.0
+    ]
+   },
+   "h4_flip_core": {
+    "downflips": [
+     5,
+     7,
+     27,
+     46
+    ],
+    "core_overlap": 1,
+    "clean_correct": 33,
+    "core_items_clean_correct": 4,
+    "applicable": true,
+    "overlap_tail_p": 0.419574780058651
+   }
+  },
+  {
+   "profile": "qwen3-32b",
+   "band": [
+    24,
+    34
+   ],
+   "passes_gate": false,
+   "status": "STOP",
+   "stop_reason": "noncoherence_gate_failed:positive_j_drop,j_below_random,wikitext_selectivity",
+   "checks": {
+    "lens_validation": true,
+    "clean_control_floor": true,
+    "positive_j_drop": false,
+    "j_below_random": false,
+    "j_drop_twice_random": true,
+    "wikitext_selectivity": false
+   },
+   "lens_gate": "PASS",
+   "h1_anti_selectivity": {
+    "sequences_j_worse": 42,
+    "sequences_j_better": 6,
+    "sequences_tied": 2,
+    "sign_test_p": 1.0087482138487758e-07,
+    "mean_paired_delta": -0.0465625,
+    "mean_paired_delta_ci95": [
+     -0.060003906249999996,
+     -0.032964843750000056
+    ],
+    "selectivity_index": 1.1608202914193197,
+    "selectivity_index_ci95": [
+     1.1124151509520581,
+     1.2138054172852444
+    ],
+    "confirmed": true
+   },
+   "descriptive_intervals": {
+    "j_drop_ci95": [
+     0.0,
+     0.16363636363636364
+    ],
+    "specificity_ci95": [
+     -0.01818181818181818,
+     0.16363636363636364
+    ]
+   },
+   "h4_flip_core": {
+    "downflips": [
+     6,
+     15,
+     26,
+     37,
+     48
+    ],
+    "core_overlap": 1,
+    "clean_correct": 46,
+    "core_items_clean_correct": 7,
+    "applicable": true,
+    "overlap_tail_p": 0.5799705855317584
+   }
+  }
+ ]
+}

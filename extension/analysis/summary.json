@@ -1,0 +1,109 @@
+{
+ "bootstrap_seed": 20260825,
+ "n_bootstrap": 10000,
+ "rows": [
+  {
+   "profile": "qwen3-4b",
+   "parameters_b": 4,
+   "role": "historical",
+   "control_clean": 0.7454545454545455,
+   "control_jspace": 0.5818181818181818,
+   "control_random": 0.7454545454545455,
+   "j_drop": 0.1636363636363637,
+   "random_drop": 0.0,
+   "specificity_random_minus_j": 0.1636363636363637,
+   "mcnemar_p_clean_vs_j": 0.01171875,
+   "mcnemar_p_random_vs_j": 0.00390625,
+   "wikitext_jspace": 0.66140625,
+   "wikitext_random": 0.84390625,
+   "degenerate_rate": 0.03333333333333333,
+   "passes_v2_equivalent_gate": false,
+   "checks": {
+    "lens_validation": true,
+    "clean_control_floor": true,
+    "positive_j_drop": true,
+    "j_below_random": true,
+    "j_drop_twice_random": true,
+    "wikitext_selectivity": false,
+    "coherence": true
+   },
+   "j_drop_ci95": [
+    0.05454545454545454,
+    0.2727272727272727
+   ],
+   "specificity_ci95": [
+    0.07272727272727272,
+    0.2727272727272727
+   ],
+   "wikitext_jspace_ci95": null
+  },
+  {
+   "profile": "qwen3-8b",
+   "parameters_b": 8,
+   "role": "secondary",
+   "control_clean": null,
+   "control_jspace": null,
+   "control_random": null,
+   "j_drop": null,
+   "random_drop": null,
+   "specificity_random_minus_j": null,
+   "mcnemar_p_clean_vs_j": null,
+   "mcnemar_p_random_vs_j": null,
+   "wikitext_jspace": null,
+   "wikitext_random": null,
+   "degenerate_rate": null,
+   "passes_v2_equivalent_gate": false,
+   "checks": {
+    "lens_validation": false
+   },
+   "status": "STOP",
+   "stop_reason": "lens_validation_failed",
+   "gpu": "NVIDIA L40S",
+   "peak_cuda_gb": 16.471340544,
+   "j_drop_ci95": null,
+   "specificity_ci95": null,
+   "wikitext_jspace_ci95": null
+  },
+  {
+   "profile": "qwen3-14b",
+   "parameters_b": 14,
+   "role": "primary",
+   "control_clean": 0.8363636363636363,
+   "control_jspace": 0.8181818181818182,
+   "control_random": 0.8363636363636363,
+   "j_drop": 0.018181818181818077,
+   "random_drop": 0.0,
+   "specificity_random_minus_j": 0.018181818181818077,
+   "mcnemar_p_clean_vs_j": 1.0,
+   "mcnemar_p_random_vs_j": 1.0,
+   "wikitext_jspace": 0.76625,
+   "wikitext_random": 0.85140625,
+   "degenerate_rate": null,
+   "passes_v2_equivalent_gate": false,
+   "checks": {
+    "lens_validation": true,
+    "clean_control_floor": true,
+    "positive_j_drop": false,
+    "j_below_random": false,
+    "j_drop_twice_random": true,
+    "wikitext_selectivity": false
+   },
+   "status": "STOP",
+   "stop_reason": "noncoherence_gate_failed:positive_j_drop,j_below_random,wikitext_selectivity",
+   "gpu": "NVIDIA L40S",
+   "peak_cuda_gb": 30.132808704,
+   "j_drop_ci95": [
+    -0.03636363636363636,
+    0.07272727272727272
+   ],
+   "specificity_ci95": [
+    -0.03636363636363636,
+    0.07272727272727272
+   ],
+   "wikitext_jspace_ci95": [
+    0.7540625,
+    0.77828125
+   ]
+  }
+ ]
+}

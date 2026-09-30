@@ -1,0 +1,327 @@
+{
+ "model_id": "Qwen/Qwen3-32B",
+ "model_revision": "9216db5781bf21249d130ec9da846c4624c16137",
+ "code_commit": "de736247dd977a96a42726318aec7ec2cfb3fe15",
+ "wikitext_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+ "recipe": {
+  "n_prompts_cap": 1000,
+  "min_chars": 600,
+  "max_chars": 2000,
+  "dim_batch": 16,
+  "max_seq_len": 128,
+  "dtype": "bfloat16",
+  "compile": false,
+  "block": 10,
+  "min_prompts": 100,
+  "block_stop_delta": 0.02
+ },
+ "prompts_sha256": "69e0420ac275e5b6b7bf5dd40aee0cdcb4eecc120864ddcbab539d4e3285a29b",
+ "prompts_fitted": 760,
+ "block_deltas": [
+  {
+   "prompts": 10,
+   "block_delta": Infinity
+  },
+  {
+   "prompts": 20,
+   "block_delta": 0.0
+  },
+  {
+   "prompts": 30,
+   "block_delta": 0.2314957231283188
+  },
+  {
+   "prompts": 40,
+   "block_delta": 0.3552013039588928
+  },
+  {
+   "prompts": 50,
+   "block_delta": 0.2987382113933563
+  },
+  {
+   "prompts": 60,
+   "block_delta": 0.22890330851078033
+  },
+  {
+   "prompts": 70,
+   "block_delta": 0.3844480514526367
+  },
+  {
+   "prompts": 80,
+   "block_delta": 0.22899162769317627
+  },
+  {
+   "prompts": 90,
+   "block_delta": 0.17546027898788452
+  },
+  {
+   "prompts": 100,
+   "block_delta": 0.1542232185602188
+  },
+  {
+   "prompts": 110,
+   "block_delta": 0.15108630061149597
+  },
+  {
+   "prompts": 120,
+   "block_delta": 0.1443755328655243
+  },
+  {
+   "prompts": 130,
+   "block_delta": 0.13384322822093964
+  },
+  {
+   "prompts": 140,
+   "block_delta": 0.11350006610155106
+  },
+  {
+   "prompts": 150,
+   "block_delta": 0.11328534781932831
+  },
+  {
+   "prompts": 160,
+   "block_delta": 0.14162509143352509
+  },
+  {
+   "prompts": 170,
+   "block_delta": 0.11051823943853378
+  },
+  {
+   "prompts": 180,
+   "block_delta": 0.1470710039138794
+  },
+  {
+   "prompts": 190,
+   "block_delta": 0.1075640395283699
+  },
+  {
+   "prompts": 200,
+   "block_delta": 0.10618402808904648
+  },
+  {
+   "prompts": 210,
+   "block_delta": 0.12149149179458618
+  },
+  {
+   "prompts": 220,
+   "block_delta": 0.08865015208721161
+  },
+  {
+   "prompts": 230,
+   "block_delta": 0.09953289479017258
+  },
+  {
+   "prompts": 240,
+   "block_delta": 0.06888733059167862
+  },
+  {
+   "prompts": 250,
+   "block_delta": 0.06465542316436768
+  },
+  {
+   "prompts": 260,
+   "block_delta": 0.08275531977415085
+  },
+  {
+   "prompts": 270,
+   "block_delta": 0.062189970165491104
+  },
+  {
+   "prompts": 280,
+   "block_delta": 0.059832941740751266
+  },
+  {
+   "prompts": 290,
+   "block_delta": 0.07906072586774826
+  },
+  {
+   "prompts": 300,
+   "block_delta": 0.08867518603801727
+  },
+  {
+   "prompts": 310,
+   "block_delta": 0.06106189265847206
+  },
+  {
+   "prompts": 320,
+   "block_delta": 0.05537094175815582
+  },
+  {
+   "prompts": 330,
+   "block_delta": 0.04975372552871704
+  },
+  {
+   "prompts": 340,
+   "block_delta": 0.05237750709056854
+  },
+  {
+   "prompts": 350,
+   "block_delta": 0.08813988417387009
+  },
+  {
+   "prompts": 360,
+   "block_delta": 0.04869020730257034
+  },
+  {
+   "prompts": 370,
+   "block_delta": 0.05073503032326698
+  },
+  {
+   "prompts": 380,
+   "block_delta": 0.047753866761922836
+  },
+  {
+   "prompts": 390,
+   "block_delta": 0.0680580735206604
+  },
+  {
+   "prompts": 400,
+   "block_delta": 0.08618924766778946
+  },
+  {
+   "prompts": 410,
+   "block_delta": 0.11584962904453278
+  },
+  {
+   "prompts": 420,
+   "block_delta": 0.07256107032299042
+  },
+  {
+   "prompts": 430,
+   "block_delta": 0.041252460330724716
+  },
+  {
+   "prompts": 440,
+   "block_delta": 0.04566528648138046
+  },
+  {
+   "prompts": 450,
+   "block_delta": 0.03483087196946144
+  },
+  {
+   "prompts": 460,
+   "block_delta": 0.03285589441657066
+  },
+  {
+   "prompts": 470,
+   "block_delta": 0.04521245136857033
+  },
+  {
+   "prompts": 480,
+   "block_delta": 0.043776288628578186
+  },
+  {
+   "prompts": 490,
+   "block_delta": 0.03877197951078415
+  },
+  {
+   "prompts": 500,
+   "block_delta": 0.032134659588336945
+  },
+  {
+   "prompts": 510,
+   "block_delta": 0.035198189318180084
+  },
+  {
+   "prompts": 520,
+   "block_delta": 0.03606647998094559
+  },
+  {
+   "prompts": 530,
+   "block_delta": 0.06273359805345535
+  },
+  {
+   "prompts": 540,
+   "block_delta": 0.038920290768146515
+  },
+  {
+   "prompts": 550,
+   "block_delta": 0.046102531254291534
+  },
+  {
+   "prompts": 560,
+   "block_delta": 0.03735293447971344
+  },
+  {
+   "prompts": 570,
+   "block_delta": 0.047279272228479385
+  },
+  {
+   "prompts": 580,
+   "block_delta": 0.03253031522035599
+  },
+  {
+   "prompts": 590,
+   "block_delta": 0.03981906175613403
+  },
+  {
+   "prompts": 600,
+   "block_delta": 0.028253985568881035
+  },
+  {
+   "prompts": 610,
+   "block_delta": 0.029082950204610825
+  },
+  {
+   "prompts": 620,
+   "block_delta": 0.039604462683200836
+  },
+  {
+   "prompts": 630,
+   "block_delta": 0.07392735034227371
+  },
+  {
+   "prompts": 640,
+   "block_delta": 0.030957698822021484
+  },
+  {
+   "prompts": 650,
+   "block_delta": 0.026854341849684715
+  },
+  {
+   "prompts": 660,
+   "block_delta": 0.03204648941755295
+  },
+  {
+   "prompts": 670,
+   "block_delta": 0.049432963132858276
+  },
+  {
+   "prompts": 680,
+   "block_delta": 0.5350772142410278
+  },
+  {
+   "prompts": 690,
+   "block_delta": 0.046170469373464584
+  },
+  {
+   "prompts": 700,
+   "block_delta": 0.02780400775372982
+  },
+  {
+   "prompts": 710,
+   "block_delta": 0.021866576746106148
+  },
+  {
+   "prompts": 720,
+   "block_delta": 0.021935859695076942
+  },
+  {
+   "prompts": 730,
+   "block_delta": 0.021672550588846207
+  },
+  {
+   "prompts": 740,
+   "block_delta": 0.02412877418100834
+  },
+  {
+   "prompts": 750,
+   "block_delta": 0.026055261492729187
+  },
+  {
+   "prompts": 760,
+   "block_delta": 0.01936379075050354
+  }
+ ],
+ "lens_sha256": "3efa365d498d09eeb5ffec201b6136d3a0a7b0d73c430d0c26aea7a956a93c0e"
+}

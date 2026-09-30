@@ -1,0 +1,86 @@
+{
+ "clean_multihop": 0.41935483870967744,
+ "clean_orderops": 0.7454545454545455,
+ "control_used": "order-ops",
+ "control_note": "multihop not near-ceiling on clean Qwen3-4B; order-ops fallback per prereg section 7",
+ "rungs": [
+  {
+   "band": [
+    14,
+    24
+   ],
+   "k": 10,
+   "control_jspace": 0.5818181818181818,
+   "wikitext_top1_jspace": 0.61703125,
+   "control_random": 0.6545454545454545,
+   "wikitext_top1_random": 0.7915625,
+   "degenerate_rate": 0.0,
+   "ablated_tok_s": 6.233462514739477,
+   "j_drop": 0.1636363636363637,
+   "r_drop": 0.09090909090909094,
+   "mcnemar_p_drop": 0.00390625,
+   "mcnemar_p_j_vs_random": 0.2890625,
+   "passes_constraints": false,
+   "passes_gate": false
+  },
+  {
+   "band": [
+    14,
+    31
+   ],
+   "k": 10,
+   "control_jspace": 0.5636363636363636,
+   "wikitext_top1_jspace": 0.57734375,
+   "control_random": 0.6545454545454545,
+   "wikitext_top1_random": 0.7275,
+   "degenerate_rate": 0.0,
+   "ablated_tok_s": 4.640776319372676,
+   "j_drop": 0.18181818181818188,
+   "r_drop": 0.09090909090909094,
+   "mcnemar_p_drop": 0.001953125,
+   "mcnemar_p_j_vs_random": 0.125,
+   "passes_constraints": false,
+   "passes_gate": false
+  },
+  {
+   "band": [
+    14,
+    24
+   ],
+   "k": 5,
+   "control_jspace": 0.6,
+   "wikitext_top1_jspace": 0.61046875,
+   "control_random": 0.6909090909090909,
+   "wikitext_top1_random": 0.8171875,
+   "degenerate_rate": 0.0,
+   "ablated_tok_s": 5.18715319775398,
+   "j_drop": 0.1454545454545455,
+   "r_drop": 0.054545454545454564,
+   "mcnemar_p_drop": 0.021484375,
+   "mcnemar_p_j_vs_random": 0.1796875,
+   "passes_constraints": false,
+   "passes_gate": false
+  },
+  {
+   "band": [
+    14,
+    19
+   ],
+   "k": 10,
+   "control_jspace": 0.5818181818181818,
+   "wikitext_top1_jspace": 0.66140625,
+   "control_random": 0.7454545454545455,
+   "wikitext_top1_random": 0.84390625,
+   "degenerate_rate": 0.03333333333333333,
+   "ablated_tok_s": 6.985651542459189,
+   "j_drop": 0.1636363636363637,
+   "r_drop": 0.0,
+   "mcnemar_p_drop": 0.01171875,
+   "mcnemar_p_j_vs_random": 0.00390625,
+   "passes_constraints": false,
+   "passes_gate": false
+  }
+ ],
+ "chosen": null,
+ "stop_gate": "FAIL"
+}

@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Validate repository scaffold
+        run: test -f README.md && test -f extension/config.json
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        if: ${{ hashFiles('pyproject.toml') != '' }}
+        with:
+          enable-cache: true
+      - name: Install locked environment
+        if: ${{ hashFiles('pyproject.toml') != '' }}
+        run: uv sync --frozen --dev
+      - name: Lint
+        if: ${{ hashFiles('pyproject.toml') != '' }}
+        run: uv run ruff check src tests/unit
+      - name: Check formatting
+        if: ${{ hashFiles('pyproject.toml') != '' }}
+        run: uv run ruff format --check src tests
+      - name: Check ORCD shell syntax
+        if: ${{ hashFiles('scripts/orcd/*') != '' }}
+        run: bash -n scripts/orcd/*.sh scripts/orcd/*.sbatch
+      - name: Test
+        if: ${{ hashFiles('pyproject.toml') != '' }}
+        run: uv run pytest

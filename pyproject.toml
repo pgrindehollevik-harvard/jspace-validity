@@ -1,0 +1,50 @@
+[project]
+name = "jspace-validity"
+version = "1.0.0"
+description = "Preregistered validation of J-space interventions across Qwen3 scale"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10,<3.15"
+authors = [{ name = "Peter Flo" }]
+keywords = ["mechanistic interpretability", "J-space", "Jacobian lens", "Qwen3"]
+dependencies = [
+    "datasets>=4,<6",
+    "huggingface-hub>=1,<2",
+    "jlens @ git+https://github.com/anthropics/jacobian-lens.git@581d398613e5602a5af361e1c34d3a92ea82ba8e",
+    "matplotlib>=3.8,<4",
+    "torch>=2.6",
+    "transformers>=5.5,<6",
+]
+
+[project.scripts]
+jspace-analyze = "jspace.scale_analyze:main"
+jspace-scale-gate = "jspace.scale_gate:main"
+jspace-scale-smoke = "jspace.scale_smoke:main"
+jspace-stage-assets = "jspace.stage_assets:main"
+jspace-stage-data = "jspace.scale_data:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8,<10",
+    "ruff>=0.12,<1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jspace"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests/unit"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

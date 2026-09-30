@@ -1,0 +1,2 @@
+# Preserve the official conference style byte-for-byte, including upstream whitespace.
+paper/neurips_2026.sty -whitespace

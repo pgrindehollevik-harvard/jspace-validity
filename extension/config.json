@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "title": "When does J-space ablation become selective?",
+  "preregistration": "extension/PREREGISTRATION.md",
+  "historical_baseline": {
+    "profile": "qwen3-4b",
+    "result": "results/calibration.json",
+    "status": "observed before v2 preregistration"
+  },
+  "models": {
+    "primary": ["qwen3-14b"],
+    "secondary": ["qwen3-8b"],
+    "excluded": ["qwen3-1.7b", "qwen3-32b"]
+  },
+  "intervention": {
+    "source_layers": 36,
+    "source_band_inclusive": [14, 19],
+    "mapping": "floor both boundaries of the half-open source interval [14,20)",
+    "k": 10,
+    "clean_exempt_k": 10,
+    "random_seed": 0
+  },
+  "data": {
+    "order_ops": {
+      "path": "vendor/jacobian-lens/data/evaluations/lens-eval-order-ops.json",
+      "n": 55
+    },
+    "multihop": {
+      "path": "vendor/jacobian-lens/data/evaluations/lens-eval-multihop.json",
+      "n": 93,
+      "use": "lens validation only"
+    },
+    "wikitext": {
+      "dataset": "Salesforce/wikitext",
+      "config": "wikitext-103-raw-v1",
+      "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+      "split": "train",
+      "n": 50,
+      "skip_eligible": 2000,
+      "min_chars": 600,
+      "max_chars": 2000,
+      "max_tokens": 128
+    },
+    "coherence": {
+      "dataset": "openai/gsm8k",
+      "config": "main",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "split": "train",
+      "n": 30,
+      "sample_seed": 100,
+      "generation_seed": 1,
+      "max_new_tokens": 640
+    }
+  },
+  "thresholds": {
+    "clean_control_accuracy_min": 0.6,
+    "mcnemar_alpha": 0.05,
+    "wikitext_top1_jspace_min_exclusive": 0.8,
+    "degenerate_rate_max_exclusive": 0.1,
+    "j_drop_vs_random_multiplier": 2.0
+  },
+  "compute_cap": {
+    "gpu_hours_per_model": 6,
+    "confirmatory_gpu_hours_total": 12,
+    "default_gpu": "l40s:1",
+    "oom_fallback_gpu": "h200:1"
+  }
+}
